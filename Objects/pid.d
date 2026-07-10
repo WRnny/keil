@@ -1,5 +1,5 @@
-./objects/ti_msp_nvic.o: ..\app\Src\ti_msp_NVIC.c \
-  ..\app\Inc\ti_msp_NVIC.h ..\ti_msp_dl_config.h \
+./objects/pid.o: ..\algorithm\Src\pid.c ..\algorithm\Inc\pid.h \
+  ..\bsp\Inc\bsp_UART.h ..\ti_msp_dl_config.h \
   ..\..\source\ti\devices\msp\msp.h \
   ..\..\source\ti\devices\DeviceFamily.h \
   ..\..\source\ti\devices\msp\m0p\mspm0g350x.h \
@@ -69,8 +69,5 @@
   ..\..\source\ti\driverlib\dl_vref.h \
   ..\..\source\ti\driverlib\dl_wwdt.h \
   ..\..\source\ti\driverlib\m0p\dl_interrupt.h \
-  ..\..\source\ti\driverlib\m0p\dl_systick.h ..\algorithm\Inc\Mahony.h \
-  ..\device\Inc\imu660rb_device.h ..\driver\Inc\imu660rb_driver.h \
-  ..\bsp\Inc\bsp_I2C.h ..\keil\main.h ..\keil\ti_msp_dl_config.h \
-  ..\device\Inc\encoder_device.h ..\bsp\Inc\bsp_QEI.h \
-  ..\bsp\Inc\bsp_UART.h ..\algorithm\Inc\pid.h
+  ..\..\source\ti\driverlib\m0p\dl_systick.h ..\keil\main.h \
+  ..\keil\ti_msp_dl_config.h

@@ -5,6 +5,7 @@
 ".\objects\main.o"
 ".\objects\oled_font.o"
 ".\objects\mahony.o"
+".\objects\pid.o"
 ".\objects\bsp_i2c.o"
 ".\objects\bsp_uart.o"
 ".\objects\bsp_qei.o"
