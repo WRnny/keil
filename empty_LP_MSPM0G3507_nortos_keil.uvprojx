@@ -534,6 +534,11 @@
               <FileType>1</FileType>
               <FilePath>..\app\Src\Task_app.c</FilePath>
             </File>
+            <File>
+              <FileName>WR_FlagSystem.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\app\Src\WR_FlagSystem.c</FilePath>
+            </File>
           </Files>
         </Group>
       </Groups>

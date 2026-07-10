@@ -1,5 +1,5 @@
-./objects/track_device.o: ..\device\Src\track_device.c \
-  ..\device\Inc\track_device.h ..\ti_msp_dl_config.h \
+./objects/wr_flagsystem.o: ..\app\Src\WR_FlagSystem.c \
+  ..\app\Inc\WR_FlagSystem.h ..\ti_msp_dl_config.h \
   ..\..\source\ti\devices\msp\msp.h \
   ..\..\source\ti\devices\DeviceFamily.h \
   ..\..\source\ti\devices\msp\m0p\mspm0g350x.h \
