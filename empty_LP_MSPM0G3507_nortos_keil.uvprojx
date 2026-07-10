@@ -489,6 +489,21 @@
               <FileType>1</FileType>
               <FilePath>..\device\Src\key_device.c</FilePath>
             </File>
+            <File>
+              <FileName>encoder_device.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\device\Src\encoder_device.c</FilePath>
+            </File>
+            <File>
+              <FileName>motor_device.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\device\Src\motor_device.c</FilePath>
+            </File>
+            <File>
+              <FileName>track_device.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\device\Src\track_device.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>

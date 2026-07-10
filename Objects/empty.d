@@ -71,8 +71,9 @@
   ..\..\source\ti\driverlib\m0p\dl_systick.h ..\app\Inc\ti_msp_NVIC\ .h \
   ..\algorithm\Inc\Mahony.h ..\device\Inc\imu660rb_device.h \
   ..\driver\Inc\imu660rb_driver.h ..\bsp\Inc\bsp_I2C.h ..\keil\main.h \
-  ..\keil\ti_msp_dl_config.h ..\bsp\Inc\bsp_UART.h \
-  ..\device\Inc\key_device.h ..\app\Inc\UI_app.h \
+  ..\keil\ti_msp_dl_config.h ..\device\Inc\encoder_device.h \
+  ..\bsp\Inc\bsp_QEI.h ..\bsp\Inc\bsp_UART.h ..\device\Inc\key_device.h \
+  ..\device\Inc\motor_device.h ..\app\Inc\UI_app.h \
   ..\app\Inc\menu_states.h ..\app\Inc\menu.h ..\app\Inc\Task_app.h \
   ..\device\Inc\oled_device.h ..\driver\Inc\oled_driver.h \
   ..\library\Inc\oled_font.h

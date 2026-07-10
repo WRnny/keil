@@ -1,5 +1,6 @@
-./objects/menu.o: ..\app\Src\menu.c ..\app\Inc\menu.h \
-  ..\ti_msp_dl_config.h ..\..\source\ti\devices\msp\msp.h \
+./objects/motor_device.o: ..\device\Src\motor_device.c \
+  ..\device\Inc\motor_device.h ..\ti_msp_dl_config.h \
+  ..\..\source\ti\devices\msp\msp.h \
   ..\..\source\ti\devices\DeviceFamily.h \
   ..\..\source\ti\devices\msp\m0p\mspm0g350x.h \
   ..\..\source\third_party\CMSIS\Core\Include\core_cm0plus.h \
@@ -68,10 +69,4 @@
   ..\..\source\ti\driverlib\dl_vref.h \
   ..\..\source\ti\driverlib\dl_wwdt.h \
   ..\..\source\ti\driverlib\m0p\dl_interrupt.h \
-  ..\..\source\ti\driverlib\m0p\dl_systick.h ..\algorithm\Inc\Mahony.h \
-  ..\device\Inc\imu660rb_device.h ..\driver\Inc\imu660rb_driver.h \
-  ..\bsp\Inc\bsp_I2C.h ..\keil\main.h ..\keil\ti_msp_dl_config.h \
-  ..\device\Inc\key_device.h ..\device\Inc\encoder_device.h \
-  ..\bsp\Inc\bsp_QEI.h ..\app\Inc\Task_app.h ..\app\Inc\menu_states.h \
-  ..\device\Inc\oled_device.h ..\driver\Inc\oled_driver.h \
-  ..\library\Inc\oled_font.h
+  ..\..\source\ti\driverlib\m0p\dl_systick.h
