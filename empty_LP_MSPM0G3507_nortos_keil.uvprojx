@@ -544,6 +544,11 @@
               <FileType>1</FileType>
               <FilePath>..\app\Src\WR_FlagSystem.c</FilePath>
             </File>
+            <File>
+              <FileName>PID_Task.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\app\Src\PID_Task.c</FilePath>
+            </File>
           </Files>
         </Group>
       </Groups>

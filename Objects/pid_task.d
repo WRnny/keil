@@ -1,4 +1,7 @@
-./objects/empty.o: ..\empty.c ..\ti_msp_dl_config.h \
+./objects/pid_task.o: ..\app\Src\PID_Task.c ..\app\Inc\PID_Task.h \
+  ..\algorithm\Inc\pid.h ..\algorithm\Inc\Mahony.h \
+  ..\device\Inc\imu660rb_device.h ..\driver\Inc\imu660rb_driver.h \
+  ..\bsp\Inc\bsp_I2C.h ..\ti_msp_dl_config.h \
   ..\..\source\ti\devices\msp\msp.h \
   ..\..\source\ti\devices\DeviceFamily.h \
   ..\..\source\ti\devices\msp\m0p\mspm0g350x.h \
@@ -68,14 +71,7 @@
   ..\..\source\ti\driverlib\dl_vref.h \
   ..\..\source\ti\driverlib\dl_wwdt.h \
   ..\..\source\ti\driverlib\m0p\dl_interrupt.h \
-  ..\..\source\ti\driverlib\m0p\dl_systick.h ..\app\Inc\ti_msp_NVIC.h \
-  ..\bsp\Inc\bsp_UART.h ..\keil\main.h ..\keil\ti_msp_dl_config.h \
-  ..\algorithm\Inc\Mahony.h ..\device\Inc\imu660rb_device.h \
-  ..\driver\Inc\imu660rb_driver.h ..\bsp\Inc\bsp_I2C.h \
+  ..\..\source\ti\driverlib\m0p\dl_systick.h ..\keil\main.h \
+  ..\keil\ti_msp_dl_config.h ..\device\Inc\motor_device.h \
   ..\device\Inc\encoder_device.h ..\bsp\Inc\bsp_QEI.h \
-  ..\device\Inc\track_device.h ..\app\Inc\PID_Task.h \
-  ..\algorithm\Inc\pid.h ..\device\Inc\motor_device.h \
-  ..\device\Inc\key_device.h ..\app\Inc\UI_app.h \
-  ..\app\Inc\menu_states.h ..\app\Inc\menu.h ..\app\Inc\Task_app.h \
-  ..\device\Inc\oled_device.h ..\driver\Inc\oled_driver.h \
-  ..\library\Inc\oled_font.h
+  ..\device\Inc\track_device.h
