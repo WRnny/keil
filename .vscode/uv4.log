@@ -1,4 +1,3 @@
 Load "d:\\ti\\mspm0_sdk_2_04_00_06\\improve_diansai\\keil\\Objects\\empty_LP_MSPM0G3507_nortos_keil.axf" 
-Internal DLL Error
-Error: Flash Download failed  -  Target DLL has been cancelled
-Flash Load finished at 07:03:13
+Erase Done.Programming Done.Verify OK.Application running ...
+Flash Load finished at 23:21:08

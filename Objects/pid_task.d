@@ -74,4 +74,4 @@
   ..\..\source\ti\driverlib\m0p\dl_systick.h ..\keil\main.h \
   ..\keil\ti_msp_dl_config.h ..\device\Inc\motor_device.h \
   ..\device\Inc\encoder_device.h ..\bsp\Inc\bsp_QEI.h \
-  ..\device\Inc\track_device.h
+  ..\device\Inc\track_device.h ..\app\Inc\WR_FlagSystem.h

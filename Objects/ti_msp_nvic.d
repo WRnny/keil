@@ -74,5 +74,5 @@
   ..\device\Inc\imu660rb_device.h ..\driver\Inc\imu660rb_driver.h \
   ..\bsp\Inc\bsp_I2C.h ..\device\Inc\encoder_device.h \
   ..\bsp\Inc\bsp_QEI.h ..\device\Inc\track_device.h \
-  ..\app\Inc\PID_Task.h ..\algorithm\Inc\pid.h \
-  ..\device\Inc\motor_device.h
+  ..\app\Inc\WR_FlagSystem.h ..\app\Inc\PID_Task.h \
+  ..\algorithm\Inc\pid.h ..\device\Inc\motor_device.h
