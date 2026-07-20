@@ -3,6 +3,9 @@
 
 #include "ti_msp_dl_config.h"
 
+/* 快速浮点运算加速（Qfplib）开关：1 开启，0 关闭 */
+#define USE_QFP_MATH       1
+
 #define WR_TICK_FREQ_DEFAULT 1 // SysTick中断服务函数的定时器频率1kHz
 #define WR_MAX_Delay 0xFFFFFFFFU // 最大等待时间
 
