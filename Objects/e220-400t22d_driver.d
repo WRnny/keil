@@ -1,6 +1,6 @@
-./objects/ti_msp_nvic.o: ..\app\Src\ti_msp_NVIC.c \
-  ..\app\Inc\ti_msp_NVIC.h ..\keil\ti_msp_dl_config.h \
-  ..\..\source\ti\devices\msp\msp.h \
+./objects/e220-400t22d_driver.o: ..\driver\Src\E220-400T22D_driver.c \
+  ..\driver\Inc\E220-400T22D_driver.h ..\bsp\Inc\bsp_UART.h \
+  ..\keil\ti_msp_dl_config.h ..\..\source\ti\devices\msp\msp.h \
   ..\..\source\ti\devices\DeviceFamily.h \
   ..\..\source\ti\devices\msp\m0p\mspm0g350x.h \
   ..\..\source\third_party\CMSIS\Core\Include\core_cm0plus.h \
@@ -69,11 +69,5 @@
   ..\..\source\ti\driverlib\dl_vref.h \
   ..\..\source\ti\driverlib\dl_wwdt.h \
   ..\..\source\ti\driverlib\m0p\dl_interrupt.h \
-  ..\..\source\ti\driverlib\m0p\dl_systick.h ..\bsp\Inc\bsp_UART.h \
-  ..\keil\main.h ..\algorithm\Inc\ringbuf.h ..\algorithm\Inc\Mahony.h \
-  ..\device\Inc\imu660rb_device.h ..\driver\Inc\imu660rb_driver.h \
-  ..\bsp\Inc\bsp_I2C.h ..\device\Inc\encoder_device.h \
-  ..\bsp\Inc\bsp_QEI.h ..\device\Inc\track_device.h \
-  ..\app\Inc\WR_FlagSystem.h ..\app\Inc\PID_Task.h \
-  ..\algorithm\Inc\pid.h ..\device\Inc\motor_device.h \
-  ..\driver\Inc\E220-400T22D_driver.h
+  ..\..\source\ti\driverlib\m0p\dl_systick.h ..\keil\main.h \
+  ..\algorithm\Inc\ringbuf.h

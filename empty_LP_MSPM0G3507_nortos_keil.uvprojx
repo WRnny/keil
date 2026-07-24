@@ -417,7 +417,7 @@
             <File>
               <FileName>qfplib.s</FileName>
               <FileType>2</FileType>
-              <FilePath>..\algorithm\Src\qfplib.s</FilePath>
+              <FilePath>..\library\Src\qfplib.s</FilePath>
             </File>
           </Files>
         </Group>
@@ -443,6 +443,11 @@
               <FileName>pid.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\algorithm\Src\pid.c</FilePath>
+            </File>
+            <File>
+              <FileName>ringbuf.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\algorithm\Src\ringbuf.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -478,6 +483,11 @@
               <FileName>imu660rb_driver.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\driver\Src\imu660rb_driver.c</FilePath>
+            </File>
+            <File>
+              <FileName>E220-400T22D_driver.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\driver\Src\E220-400T22D_driver.c</FilePath>
             </File>
           </Files>
         </Group>

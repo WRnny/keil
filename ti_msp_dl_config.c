@@ -63,6 +63,7 @@ SYSCONFIG_WEAK void SYSCFG_DL_init(void)
     SYSCFG_DL_OLED_init();
     SYSCFG_DL_imu660rb_init();
     SYSCFG_DL_Debug_UART_init();
+    SYSCFG_DL_E220_init();
     SYSCFG_DL_SYSTICK_init();
     /* Ensure backup structures have no valid state */
 	gmotor_pwmBackup.backupRdy 	= false;
@@ -113,6 +114,7 @@ SYSCONFIG_WEAK void SYSCFG_DL_initPower(void)
     DL_I2C_reset(OLED_INST);
     DL_I2C_reset(imu660rb_INST);
     DL_UART_Main_reset(Debug_UART_INST);
+    DL_UART_Main_reset(E220_INST);
 
 
     DL_GPIO_enablePower(GPIOA);
@@ -125,6 +127,7 @@ SYSCONFIG_WEAK void SYSCFG_DL_initPower(void)
     DL_I2C_enablePower(OLED_INST);
     DL_I2C_enablePower(imu660rb_INST);
     DL_UART_Main_enablePower(Debug_UART_INST);
+    DL_UART_Main_enablePower(E220_INST);
 
     delay_cycles(POWER_STARTUP_DELAY);
 }
@@ -168,6 +171,10 @@ SYSCONFIG_WEAK void SYSCFG_DL_GPIO_init(void)
         GPIO_Debug_UART_IOMUX_TX, GPIO_Debug_UART_IOMUX_TX_FUNC);
     DL_GPIO_initPeripheralInputFunction(
         GPIO_Debug_UART_IOMUX_RX, GPIO_Debug_UART_IOMUX_RX_FUNC);
+    DL_GPIO_initPeripheralOutputFunction(
+        GPIO_E220_IOMUX_TX, GPIO_E220_IOMUX_TX_FUNC);
+    DL_GPIO_initPeripheralInputFunction(
+        GPIO_E220_IOMUX_RX, GPIO_E220_IOMUX_RX_FUNC);
 
     DL_GPIO_initDigitalOutput(buzzer_gpio_PIN_0_IOMUX);
 
@@ -229,18 +236,22 @@ SYSCONFIG_WEAK void SYSCFG_DL_GPIO_init(void)
 		 DL_GPIO_INVERSION_DISABLE, DL_GPIO_RESISTOR_PULL_DOWN,
 		 DL_GPIO_HYSTERESIS_DISABLE, DL_GPIO_WAKEUP_DISABLE);
 
+    DL_GPIO_initDigitalOutput(debug_led_gpio_led2_IOMUX);
+
     DL_GPIO_setPins(GPIOA, motor_dir_BIN1_PIN |
 		motor_dir_BIN2_PIN);
     DL_GPIO_enableOutput(GPIOA, motor_dir_BIN1_PIN |
 		motor_dir_BIN2_PIN);
     DL_GPIO_clearPins(GPIOB, buzzer_gpio_PIN_0_PIN |
-		debug_led_gpio_led_1_PIN);
+		debug_led_gpio_led_1_PIN |
+		debug_led_gpio_led2_PIN);
     DL_GPIO_setPins(GPIOB, motor_dir_AIN1_PIN |
 		motor_dir_AIN2_PIN);
     DL_GPIO_enableOutput(GPIOB, buzzer_gpio_PIN_0_PIN |
 		debug_led_gpio_led_1_PIN |
 		motor_dir_AIN1_PIN |
-		motor_dir_AIN2_PIN);
+		motor_dir_AIN2_PIN |
+		debug_led_gpio_led2_PIN);
 
 }
 
@@ -562,6 +573,44 @@ SYSCONFIG_WEAK void SYSCFG_DL_Debug_UART_init(void)
 
 
     DL_UART_Main_enable(Debug_UART_INST);
+}
+
+static const DL_UART_Main_ClockConfig gE220ClockConfig = {
+    .clockSel    = DL_UART_MAIN_CLOCK_MFCLK,
+    .divideRatio = DL_UART_MAIN_CLOCK_DIVIDE_RATIO_1
+};
+
+static const DL_UART_Main_Config gE220Config = {
+    .mode        = DL_UART_MAIN_MODE_NORMAL,
+    .direction   = DL_UART_MAIN_DIRECTION_TX_RX,
+    .flowControl = DL_UART_MAIN_FLOW_CONTROL_NONE,
+    .parity      = DL_UART_MAIN_PARITY_NONE,
+    .wordLength  = DL_UART_MAIN_WORD_LENGTH_8_BITS,
+    .stopBits    = DL_UART_MAIN_STOP_BITS_ONE
+};
+
+SYSCONFIG_WEAK void SYSCFG_DL_E220_init(void)
+{
+    DL_UART_Main_setClockConfig(E220_INST, (DL_UART_Main_ClockConfig *) &gE220ClockConfig);
+
+    DL_UART_Main_init(E220_INST, (DL_UART_Main_Config *) &gE220Config);
+    /*
+     * Configure baud rate by setting oversampling and baud rate divisors.
+     *  Target baud rate: 115200
+     *  Actual baud rate: 115107.91
+     */
+    DL_UART_Main_setOversampling(E220_INST, DL_UART_OVERSAMPLING_RATE_16X);
+    DL_UART_Main_setBaudRateDivisor(E220_INST, E220_IBRD_4_MHZ_115200_BAUD, E220_FBRD_4_MHZ_115200_BAUD);
+
+
+    /* Configure Interrupts */
+    DL_UART_Main_enableInterrupt(E220_INST,
+                                 DL_UART_MAIN_INTERRUPT_RX);
+    /* Setting the Interrupt Priority */
+    NVIC_SetPriority(E220_INST_INT_IRQN, 1);
+
+
+    DL_UART_Main_enable(E220_INST);
 }
 
 SYSCONFIG_WEAK void SYSCFG_DL_SYSTICK_init(void)

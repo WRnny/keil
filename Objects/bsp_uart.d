@@ -68,4 +68,5 @@
   ..\..\source\ti\driverlib\dl_vref.h \
   ..\..\source\ti\driverlib\dl_wwdt.h \
   ..\..\source\ti\driverlib\m0p\dl_interrupt.h \
-  ..\..\source\ti\driverlib\m0p\dl_systick.h ..\keil\main.h
+  ..\..\source\ti\driverlib\m0p\dl_systick.h ..\keil\main.h \
+  ..\algorithm\Inc\ringbuf.h

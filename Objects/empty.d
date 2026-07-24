@@ -69,12 +69,13 @@
   ..\..\source\ti\driverlib\dl_wwdt.h \
   ..\..\source\ti\driverlib\m0p\dl_interrupt.h \
   ..\..\source\ti\driverlib\m0p\dl_systick.h ..\app\Inc\ti_msp_NVIC.h \
-  ..\bsp\Inc\bsp_UART.h ..\keil\main.h ..\algorithm\Inc\Mahony.h \
-  ..\device\Inc\imu660rb_device.h ..\driver\Inc\imu660rb_driver.h \
-  ..\bsp\Inc\bsp_I2C.h ..\device\Inc\encoder_device.h \
-  ..\bsp\Inc\bsp_QEI.h ..\device\Inc\track_device.h \
-  ..\app\Inc\WR_FlagSystem.h ..\app\Inc\PID_Task.h \
-  ..\algorithm\Inc\pid.h ..\device\Inc\motor_device.h \
+  ..\bsp\Inc\bsp_UART.h ..\keil\main.h ..\algorithm\Inc\ringbuf.h \
+  ..\algorithm\Inc\Mahony.h ..\device\Inc\imu660rb_device.h \
+  ..\driver\Inc\imu660rb_driver.h ..\bsp\Inc\bsp_I2C.h \
+  ..\device\Inc\encoder_device.h ..\bsp\Inc\bsp_QEI.h \
+  ..\device\Inc\track_device.h ..\app\Inc\WR_FlagSystem.h \
+  ..\app\Inc\PID_Task.h ..\algorithm\Inc\pid.h \
+  ..\device\Inc\motor_device.h ..\driver\Inc\E220-400T22D_driver.h \
   ..\device\Inc\key_device.h ..\app\Inc\UI_app.h \
   ..\app\Inc\menu_states.h ..\app\Inc\menu.h ..\app\Inc\Task_app.h \
   ..\device\Inc\oled_device.h ..\driver\Inc\oled_driver.h \

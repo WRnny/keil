@@ -183,6 +183,22 @@ extern "C" {
 #define Debug_UART_BAUD_RATE                                            (115200)
 #define Debug_UART_IBRD_4_MHZ_115200_BAUD                                    (2)
 #define Debug_UART_FBRD_4_MHZ_115200_BAUD                                   (11)
+/* Defines for E220 */
+#define E220_INST                                                          UART2
+#define E220_INST_FREQUENCY                                              4000000
+#define E220_INST_IRQHandler                                    UART2_IRQHandler
+#define E220_INST_INT_IRQN                                        UART2_INT_IRQn
+#define GPIO_E220_RX_PORT                                                  GPIOA
+#define GPIO_E220_TX_PORT                                                  GPIOB
+#define GPIO_E220_RX_PIN                                          DL_GPIO_PIN_22
+#define GPIO_E220_TX_PIN                                          DL_GPIO_PIN_17
+#define GPIO_E220_IOMUX_RX                                       (IOMUX_PINCM47)
+#define GPIO_E220_IOMUX_TX                                       (IOMUX_PINCM43)
+#define GPIO_E220_IOMUX_RX_FUNC                        IOMUX_PINCM47_PF_UART2_RX
+#define GPIO_E220_IOMUX_TX_FUNC                        IOMUX_PINCM43_PF_UART2_TX
+#define E220_BAUD_RATE                                                  (115200)
+#define E220_IBRD_4_MHZ_115200_BAUD                                          (2)
+#define E220_FBRD_4_MHZ_115200_BAUD                                         (11)
 
 
 
@@ -260,6 +276,9 @@ extern "C" {
 /* Defines for track7: GPIOA.21 with pinCMx 46 on package pin 17 */
 #define track_gpio_track7_PIN                                   (DL_GPIO_PIN_21)
 #define track_gpio_track7_IOMUX                                  (IOMUX_PINCM46)
+/* Defines for led2: GPIOB.22 with pinCMx 50 on package pin 21 */
+#define debug_led_gpio_led2_PIN                                 (DL_GPIO_PIN_22)
+#define debug_led_gpio_led2_IOMUX                                (IOMUX_PINCM50)
 
 
 
@@ -277,6 +296,7 @@ void SYSCFG_DL_PID_TIMER_init(void);
 void SYSCFG_DL_OLED_init(void);
 void SYSCFG_DL_imu660rb_init(void);
 void SYSCFG_DL_Debug_UART_init(void);
+void SYSCFG_DL_E220_init(void);
 
 void SYSCFG_DL_SYSTICK_init(void);
 

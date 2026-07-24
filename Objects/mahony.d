@@ -71,4 +71,4 @@
   ..\..\source\ti\driverlib\dl_wwdt.h \
   ..\..\source\ti\driverlib\m0p\dl_interrupt.h \
   ..\..\source\ti\driverlib\m0p\dl_systick.h ..\keil\main.h \
-  ..\algorithm\Inc\qfplib_port.h ..\algorithm\Inc\qfplib.h
+  ..\library\Inc\qfplib_port.h ..\library\Inc\qfplib.h
